@@ -15858,7 +15858,31 @@
                             "languages": [
                                 "VF"
                             ],
-                            "urls": {}
+                            "urls": {
+                                "VF": "https://video.sibnet.ru/shell.php?videoid=5710680",
+                                "VOSTFR": "https://video.sibnet.ru/shell.php?videoid=5710658"
+                            },
+                            "all_sources": {
+                                "VF": [
+                                    "https://video.sibnet.ru/shell.php?videoid=5710680",
+                                    "https://vidmoly.to/embed-c1sokkikzi3w.html",
+                                    "https://sendvid.com/embed/iev4jqyg",
+                                    "https://oneupload.to/embed-qiqidsnpcnwb.html",
+                                    "https://vk.com/video_ext.php?oid=751474887&id=456240502&hd=3",
+                                    "https://video.sibnet.ru/shell.php?videoid=5710691",
+                                    "https://vidmoly.to/embed-mqj1d4buntek.html",
+                                    "https://sendvid.com/embed/f5akkfvz",
+                                    "https://oneupload.to/embed-cdavsgsltqms.html",
+                                    "https://vk.com/video_ext.php?oid=751474887&id=456240503&hd=3"
+                                ],
+                                "VOSTFR": [
+                                    "https://video.sibnet.ru/shell.php?videoid=5710658",
+                                    "https://video.sibnet.ru/shell.php?videoid=5710658",
+                                    "https://vidmoly.to/embed-igrrs8e8n4tf.html",
+                                    "https://sendvid.com/embed/h1w2hyq3",
+                                    "https://vk.com/video_ext.php?oid=751474887&id=456240500&hd=3"
+                                ]
+                            }
                         },
                         {
                             "episode_number": 3,

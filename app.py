@@ -1980,16 +1980,16 @@ def player(anime_id, season_num, episode_num):
                 if video_urls['VOSTFR'] not in vostfr_urls:
                     vostfr_urls.append(video_urls['VOSTFR'])
 
-            # Filtrer les URLs par source (Vidmoly en priorité)
-            vf_vidmoly = [url for url in vf_urls if "vidmoly" in url.lower()]
-            vf_other = [url for url in vf_urls if "vidmoly" not in url.lower()]
-            vostfr_vidmoly = [url for url in vostfr_urls if "vidmoly" in url.lower()]
-            vostfr_other = [url for url in vostfr_urls if "vidmoly" not in url.lower()]
+            # Filtrer les URLs par source (Sibnet en priorité)
+            vf_sibnet = [url for url in vf_urls if "sibnet" in url.lower()]
+            vf_other = [url for url in vf_urls if "sibnet" not in url.lower()]
+            vostfr_sibnet = [url for url in vostfr_urls if "sibnet" in url.lower()]
+            vostfr_other = [url for url in vostfr_urls if "sibnet" not in url.lower()]
 
             # Sélectionner la meilleure URL disponible (priorité Vidmoly et VF)
             video_url = ""
-            if vf_vidmoly:
-                video_url = vf_vidmoly[0]
+            if vf_sibnet:
+                video_url = vf_sibnet[0]
                 episode_lang = "VF"
             elif vf_other:
                 video_url = vf_other[0]
