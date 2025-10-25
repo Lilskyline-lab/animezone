@@ -1,0 +1,344 @@
+{
+    "anime": [
+        {
+            "id": 8,
+            "anime_id": 8,
+            "title": "Naruto",
+            "description": "D\u00e9couvrez Naruto, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/naruto.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 3,
+            "anime_id": 3,
+            "title": "Dragon Ball",
+            "description": "D\u00e9couvrez Dragon Ball, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/dragon-ball.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 5,
+            "anime_id": 5,
+            "title": "Death Note",
+            "description": "D\u00e9couvrez Death Note, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/death-note.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 6,
+            "anime_id": 6,
+            "title": "My Hero Academia",
+            "description": "D\u00e9couvrez My Hero Academia, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/my-hero-academia.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 7,
+            "anime_id": 7,
+            "title": "Hunter x Hunter",
+            "description": "D\u00e9couvrez Hunter x Hunter, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/hunter-x-hunter.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 4,
+            "anime_id": 4,
+            "title": "Demon Slayer",
+            "description": "D\u00e9couvrez Demon Slayer, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/demon-slayer.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 2,
+            "anime_id": 2,
+            "title": "Mashle",
+            "description": "D\u00e9couvrez Mashle, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/mashle.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 9,
+            "anime_id": 9,
+            "title": "Fairy Tail",
+            "description": "D\u00e9couvrez Fairy Tail, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/fairy-tail.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 10,
+            "anime_id": 10,
+            "title": "Sword Art Online",
+            "description": "D\u00e9couvrez Sword Art Online, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/sword-art-online.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        },
+        {
+            "id": 11,
+            "anime_id": 11,
+            "title": "Jujutsu Kaisen",
+            "description": "D\u00e9couvrez Jujutsu Kaisen, un anime populaire.",
+            "image": "https://cdn.statically.io/gh/Anime-Sama/IMG/img/contenu/jujutsu-kaisen.jpg",
+            "genres": [
+                "Action",
+                "Aventure"
+            ],
+            "rating": 8.5,
+            "featured": true,
+            "has_episodes": true,
+            "seasons": [
+                {
+                    "season_number": 1,
+                    "name": "Saison 1",
+                    "episodes": [
+                        {
+                            "episode_number": 1,
+                            "title": "\u00c9pisode 1",
+                            "description": "Premier \u00e9pisode",
+                            "duration": 24,
+                            "languages": [
+                                "VOSTFR",
+                                "VF"
+                            ],
+                            "urls": {}
+                        }
+                    ]
+                }
+            ],
+            "seasons_fetched": true
+        }
+    ]
+}
