@@ -88,31 +88,41 @@
 </head>
 <body>
 
-    <div class="menu-container">
-        <button class="menu-btn" id="mainButton">🎬 Choisir une source</button>
-        <div class="menu-options" id="menu">
-            <div class="menu-option">MixDrop</div>
-            <div class="menu-option">DoodStream</div>
-            <div class="menu-option">SendVid</div>
-            <div class="menu-option">OneUpload</div>
-        </div>
-    </div>
+<div class="menu-container">
+    <button class="menu-btn" id="mainButton">🎬 Choisir une source</button>
+    <a class="menu-options" id="menu" href="javascript:void(0);">
+        <i class="menu-option">MixDrop</i>
+        <i class="menu-option">DoodStream</i>
+        <i class="menu-option">SendVid</i>
+        <i class="menu-option">OneUpload</i>
+    </a>
+</div>
 
-    <script>
-        const btn = document.getElementById('mainButton');
-        const menu = document.getElementById('menu');
+<script>
+    const btn = document.getElementById('mainButton');
+    const menu = document.getElementById('menu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('active');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    // Ferme le menu si on clique ailleurs
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.menu-container')) {
+            menu.classList.remove('active');
+        }
+    });
+
+    // Clique sur une option i
+    document.querySelectorAll('.menu-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.preventDefault(); // Évite tout comportement de lien
+            btn.textContent = `🎬 ${option.textContent}`;
+            menu.classList.remove('active');
+            console.log(`Source sélectionnée : ${option.textContent}`);
         });
-
-        // Ferme le menu si on clique ailleurs
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.menu-container')) {
-                menu.classList.remove('active');
-            }
-        });
-    </script>
+    });
+</script>
 
 </body>
 </html>
