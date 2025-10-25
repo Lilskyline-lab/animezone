@@ -11,6 +11,10 @@
         <a href="/anime/{{ anime.anime_id if anime.anime_id else anime.id }}" style="color: var(--text-secondary);">{{ anime.title }}</a>
         <span style="color: var(--text-muted); margin: 0 0.5rem;">/</span>
         <span style="color: var(--text-primary);">S{{ season.season_number }}E{{ episode.episode_number }}: {{ episode.title }}</span>
+        <br>
+        <strong>
+        <span> Si la vidéo ne se lance pas, essayez de changer de source (vous pouvez le faire en bas de la vidéo).</span>
+        </strong>
     </div>
 
     <!-- Video Player -->
