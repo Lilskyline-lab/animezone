@@ -54,6 +54,20 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+# Middleware pour logger l'adresse IP de chaque requête
+@app.before_request
+def log_request_info():
+    # Récupérer l'adresse IP réelle (en tenant compte des proxies)
+    if request.headers.get('X-Forwarded-For'):
+        client_ip = request.headers.get('X-Forwarded-For').split(',')[0].strip()
+    elif request.headers.get('X-Real-IP'):
+        client_ip = request.headers.get('X-Real-IP')
+    else:
+        client_ip = request.remote_addr
+    
+    # Logger l'IP, la méthode HTTP et le chemin
+    logger.info(f"Request from IP: {client_ip} | Method: {request.method} | Path: {request.path}")
+
 # Liste des animes populaires à précharger au démarrage du serveur
 POPULAR_ANIMES = [
     {"title": "One Piece", "id": 183},
