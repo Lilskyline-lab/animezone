@@ -67,42 +67,7 @@
             </div>
             {% endif %}
             
-            <!-- Section pour changer de source vidéo -->
-            <h3 class="source-title">► Changer de source vidéo :</h3>
-            <div class="big-buttons-container">
-                <!-- Bouton de téléchargement direct -->
-                <button id="download-button" class="big-source-button download-button">
-                    <i class="fas fa-download"></i> Télécharger
-                </button>
-
-                {% if episode.all_sources and episode.all_sources[episode_lang] %}
-                    {% for alt_url in episode.all_sources[episode_lang][:5] %}
-                        <a href="/player/{{ anime.anime_id if anime.anime_id else anime.id }}/{{ season.season_number }}/{{ episode.episode_number }}?source={{ alt_url|urlencode }}&lang={{ episode_lang }}" 
-                           class="big-source-button {% if alt_url == download_url %}active{% endif %}">
-                            {% if 'sendvid' in alt_url %}
-                                <i class="fas fa-play-circle"></i> SendVid
-                            {% elif 'oneupload' in alt_url %}
-                                <i class="fas fa-play-circle"></i> OneUpload
-                            {% elif 'mixdrop' in alt_url %}
-                                <i class="fas fa-play-circle"></i> MixDrop
-                            {% elif 'dood' in alt_url %}
-                                <i class="fas fa-play-circle"></i> DoodStream
-                            {% elif 'vidmoly' in alt_url %}
-                                <i class="fas fa-play-circle"></i> Vidmoly
-                            {% else %}
-                                <i class="fas fa-play-circle"></i> Source {{ loop.index }}
-                            {% endif %}
-                        </a>
-                    {% endfor %}
-                {% else %}
-                    <div class="no-sources">Aucune source alternative disponible</div>
-                {% endif %}
-
-                <!-- Bouton pour recharger la vidéo -->
-                <button onclick="reloadPlayer()" class="big-source-button reload-button">
-                    <i class="fas fa-sync-alt"></i> Recharger la vidéo
-                </button>
-            </div>
+            
         </div>
     </div>
 
@@ -154,6 +119,39 @@
     <!-- Episode Navigation -->
     <div class="player-controls">
         <div class="episode-navigation">
+            <!-- Section pour changer de source vidéo -->
+            <h3 class="source-title"></h3>
+            <div class="big-buttons-container">
+
+
+                {% if episode.all_sources and episode_lang and episode_lang in episode.all_sources and episode.all_sources[episode_lang] %}
+                    {% for alt_url in episode.all_sources[episode_lang][:5] %}
+                        <a href="/player/{{ anime.anime_id if anime.anime_id else anime.id }}/{{ season.season_number }}/{{ episode.episode_number }}?source={{ alt_url|urlencode }}&lang={{ episode_lang }}" 
+                           class="big-source-button {% if alt_url == download_url %}active{% endif %}">
+                            {% if 'sendvid' in alt_url %}
+                                <i class="fas fa-play-circle"></i> SendVid
+                            {% elif 'oneupload' in alt_url %}
+                                <i class="fas fa-play-circle"></i> OneUpload
+                            {% elif 'mixdrop' in alt_url %}
+                                <i class="fas fa-play-circle"></i> MixDrop
+                            {% elif 'dood' in alt_url %}
+                                <i class="fas fa-play-circle"></i> DoodStream
+                            {% elif 'vidmoly' in alt_url %}
+                                <i class="fas fa-play-circle"></i> Vidmoly
+                            {% else %}
+                                <i class="fas fa-play-circle"></i> Source {{ loop.index }}
+                            {% endif %}
+                        </a>
+                    {% endfor %}
+                {% else %}
+                    <div class="no-sources">Aucune source alternative disponible</div>
+                {% endif %}
+
+                <!-- Bouton pour recharger la vidéo -->
+                <button onclick="reloadPlayer()" class="big-source-button reload-button">
+                    <i class="fas fa-sync-alt"></i> Recharger la vidéo
+                </button>
+            </div>
             <!-- Previous Episode Button -->
             {% if episode.episode_number > 1 %}
             <a href="/player/{{ anime.anime_id if anime.anime_id else anime.id }}/{{ season.season_number }}/{{ episode.episode_number - 1 }}" class="btn btn-outline">
@@ -165,7 +163,7 @@
             </button>
             {% endif %}
 
-            <!-- Download Button -->
+            <!-- Download Button (BAS) -->
             <button id="downloadBtn" onclick="downloadEpisode()" class="btn btn-primary">
                 <i class="fas fa-download"></i> Télécharger l'épisode
             </button>
@@ -473,7 +471,6 @@
         const videoFrame = document.getElementById('video-player');
         const antiPubOverlay = document.getElementById('anti-pub-overlay');
         const downloadUrl = "{{ download_url }}";
-        const downloadButton = document.getElementById('download-button');
 
         // Fonction pour recharger le lecteur sans redirection
         window.reloadPlayer = function() {
@@ -536,19 +533,12 @@
         // Code de détection de blocage d'iframe supprimé pour éviter les problèmes
 
         // Aucun traitement spécial pour Vidmoly - utilisation directe de l'iframe pour toutes les sources
-        
-        // Gestion du bouton de téléchargement direct
-        if (downloadButton) {
-            downloadButton.addEventListener('click', function() {
-                downloadEpisode();
-            });
-        }
     });
 
-    // Fonction de téléchargement
+    // Fonction de téléchargement (utilisée par les DEUX boutons)
     function downloadEpisode() {
         const downloadBtn = document.getElementById('downloadBtn');
-        const topDownloadBtn = document.getElementById('download-button');
+        const topDownloadBtn = document.getElementById('top-download-button');
         const progressBar = document.getElementById('downloadProgress');
         const progressText = document.getElementById('downloadText');
         const videoFrame = document.getElementById('video-player');
@@ -559,7 +549,7 @@
             return;
         }
 
-        // Désactiver les boutons et montrer la progression
+        // Désactiver les DEUX boutons et montrer la progression
         if (downloadBtn) {
             downloadBtn.disabled = true;
             downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Préparation...';
@@ -569,8 +559,14 @@
             topDownloadBtn.disabled = true;
             topDownloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Préparation...';
         }
-        progressBar.style.display = 'block';
-        progressText.textContent = "Préparation du téléchargement...";
+        
+        if (progressBar) {
+            progressBar.style.display = 'block';
+        }
+        
+        if (progressText) {
+            progressText.textContent = "Préparation du téléchargement...";
+        }
         
         // Récupérer l'URL source de l'iframe
         const videoUrl = videoFrame.src;
@@ -605,19 +601,23 @@
                 downloadLink.click();
                 document.body.removeChild(downloadLink);
                 
-                progressText.textContent = "Téléchargement en cours...";
-                progressText.style.color = "#4CAF50";
+                if (progressText) {
+                    progressText.textContent = "Téléchargement en cours...";
+                    progressText.style.color = "#4CAF50";
+                }
             } else {
                 throw new Error(data.error || 'Échec du téléchargement');
             }
         })
         .catch(error => {
             console.error('Erreur de téléchargement:', error);
-            progressText.textContent = "Échec du téléchargement. Essayez avec une autre source.";
-            progressText.style.color = "#F44336";
+            if (progressText) {
+                progressText.textContent = "Échec du téléchargement. Essayez avec une autre source.";
+                progressText.style.color = "#F44336";
+            }
         })
         .finally(() => {
-            // Réactiver les boutons après un délai
+            // Réactiver les DEUX boutons après un délai
             setTimeout(() => {
                 if (downloadBtn) {
                     downloadBtn.disabled = false;
@@ -629,9 +629,12 @@
                     topDownloadBtn.innerHTML = '<i class="fas fa-download"></i> Télécharger';
                 }
                 
-                progressBar.style.display = 'none';
+                if (progressBar) {
+                    progressBar.style.display = 'none';
+                }
+                
                 // Ne pas cacher le texte en cas d'erreur
-                if (progressText.style.color !== "#F44336") {
+                if (progressText && progressText.style.color !== "#F44336") {
                     progressText.style.display = 'none';
                 }
             }, 3000);

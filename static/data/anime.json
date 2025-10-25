@@ -4302,8 +4302,19 @@
                                 "VF"
                             ],
                             "urls": {
-                                "VF": "https://vidmoly.to/embed-w5n5jgsr57pf.html",
+                                "VF": "https://video.sibnet.ru/shell.php?videoid=5295592",
                                 "VOSTFR": "https://vidmoly.to/embed-zxuvtirzi5p4.html"
+                            },
+                            "all_sources": {
+                                "VF": [
+                                    "https://video.sibnet.ru/shell.php?videoid=5295592",
+                                    "https://vidmoly.to/embed-w5n5jgsr57pf.html"
+                                ],
+                                "VOSTFR": [
+                                    "https://vidmoly.to/embed-zxuvtirzi5p4.html",
+                                    "https://sendvid.com/embed/nc9wga1n",
+                                    "https://sendvid.com/embed/nc9wga1n"
+                                ]
                             }
                         },
                         {
@@ -15814,8 +15825,29 @@
                                 "VF"
                             ],
                             "urls": {
-                                "VF": "https://vidmoly.to/embed-4b5r6ogmt9ce.html",
-                                "VOSTFR": "https://vidmoly.to/embed-0x54f3jyrbvp.html"
+                                "VF": "https://video.sibnet.ru/shell.php?videoid=5702327",
+                                "VOSTFR": "https://video.sibnet.ru/shell.php?videoid=5700630"
+                            },
+                            "all_sources": {
+                                "VF": [
+                                    "https://video.sibnet.ru/shell.php?videoid=5702327",
+                                    "https://vidmoly.to/embed-4b5r6ogmt9ce.html",
+                                    "https://sendvid.com/embed/6kntwzl3",
+                                    "https://oneupload.to/embed-gktvi5ru3u64.html",
+                                    "https://vk.com/video_ext.php?oid=751474887&id=456240455&hd=3",
+                                    "https://video.sibnet.ru/shell.php?videoid=5700630",
+                                    "https://vidmoly.to/embed-x930et4kebxj.html",
+                                    "https://sendvid.com/embed/ovkkf25s",
+                                    "https://oneupload.to/embed-73unim6t2146.html",
+                                    "https://vk.com/video_ext.php?oid=751474887&id=456240448&hd=3"
+                                ],
+                                "VOSTFR": [
+                                    "https://video.sibnet.ru/shell.php?videoid=5700630",
+                                    "https://video.sibnet.ru/shell.php?videoid=5700630",
+                                    "https://vidmoly.to/embed-0x54f3jyrbvp.html",
+                                    "https://sendvid.com/embed/id61jupd",
+                                    "https://vk.com/video_ext.php?oid=751474887&id=456240486&hd=3"
+                                ]
                             }
                         },
                         {

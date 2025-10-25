@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Dropdown - Style Anime Zone</title>
+    <style>
+        /* =======================
+           🌙 Thème général sombre
+        ======================= */
+        body {
+            background: #121212;
+            color: #eee;
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* =======================
+           🎛️ Bouton principal
+        ======================= */
+        .menu-container {
+            position: relative;
+        }
+
+        .menu-btn {
+            background: linear-gradient(135deg, #2196f3, #00bcd4);
+            border: none;
+            padding: 14px 22px;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .menu-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 188, 212, 0.6);
+        }
+
+        /* =======================
+           📋 Menu déroulant
+        ======================= */
+        .menu-options {
+            position: absolute;
+            top: 110%;
+            right: 0;
+            background: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            display: none;
+            flex-direction: column;
+            min-width: 180px;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .menu-options.active {
+            display: flex;
+        }
+
+        .menu-option {
+            padding: 12px 16px;
+            color: #f1f1f1;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .menu-option:last-child {
+            border-bottom: none;
+        }
+
+        .menu-option:hover {
+            background: linear-gradient(135deg, #00bcd4, #2196f3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <button class="menu-btn" id="mainButton">🎬 Choisir une source</button>
+        <div class="menu-options" id="menu">
+            <div class="menu-option">MixDrop</div>
+            <div class="menu-option">DoodStream</div>
+            <div class="menu-option">SendVid</div>
+            <div class="menu-option">OneUpload</div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('mainButton');
+        const menu = document.getElementById('menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Ferme le menu si on clique ailleurs
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.menu-container')) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
