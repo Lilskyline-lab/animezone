@@ -15,7 +15,7 @@ def test_download():
                     "vf": Players(),
                     "vostfr": Players(
                         [
-                            "https://s22.anime-sama.fr/s2/",
+                            "https://s22.anime-sama.org/s2/",
                         ]
                     ),
                 }

@@ -37,7 +37,7 @@ except ImportError as e:
     logger.error(f"Erreur d'import de l'API Anime-Sama: {e}")
 
 # URL de base pour l'API Anime-Sama
-ANIME_SAMA_BASE_URL = "https://anime-sama.fr/"
+ANIME_SAMA_BASE_URL = "https://anime-sama.org/"
 
 # Initialize Flask app
 app = Flask(__name__)

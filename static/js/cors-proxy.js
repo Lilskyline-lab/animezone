@@ -42,9 +42,9 @@ class CorsProxy {
    * @returns {Promise} - La réponse au format JSON
    */
   async fetchWithProxy(url, options = {}) {
-    // Vérifier que l'URL est bien pour anime-sama.fr
-    if (!url.includes('anime-sama.fr')) {
-      throw new Error('Seules les URLs de anime-sama.fr sont autorisées par ce proxy');
+    // Vérifier que l'URL est bien pour anime-sama.org
+    if (!url.includes('anime-sama.org')) {
+      throw new Error('Seules les URLs de anime-sama.org sont autorisées par ce proxy');
     }
 
     // Si nous avons déjà un proxy qui fonctionne, l'utiliser directement
